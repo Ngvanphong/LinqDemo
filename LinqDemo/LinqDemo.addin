@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Text>Command LinqDemo</Text>
+		<Description>LinqDemo</Description>
+		<Assembly>LinqDemo.dll</Assembly>
+		<FullClassName>LinqDemo.Command</FullClassName>
+		<ClientId>ff8ddf15-345f-4cc1-8cdc-3ccc3eca1afe</ClientId>
+		<VendorId>Tobic</VendorId>
+		<VendorDescription>Tobic</VendorDescription>
+	</AddIn>
+	<AddIn Type="Application">
+		<Name>Application LinqDemo</Name>
+		<Assembly>LinqDemo.dll</Assembly>
+		<FullClassName>LinqDemo.App</FullClassName>
+		<ClientId>c2ed4d07-58c2-4a09-a36f-e158e88f33fe</ClientId>
+		<VendorId>Tobic</VendorId>
+		<VendorDescription>Tobic</VendorDescription>
+	</AddIn>
+</RevitAddIns>
