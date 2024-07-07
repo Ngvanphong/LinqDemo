@@ -41,8 +41,87 @@ namespace LinqDemo
             var group = from f in listFamilySy
                         group f by f.Name;
 
+            IEnumerable<NameId> listSelect= listFamilySy.Select(x => new NameId(x.Name,x.Id));
+
+            var listSelect2 = from a in listFamilySy
+                              select new {a.Name, a.Id};
+
+            IEnumerable<string> listSelectName = listFamilySy.Select(x => x.Name);
+
+            bool isAllTrue = listFamilySy.All(x => x.Id.Value < 10000);
+
+            bool hasItem = listFamilySy.Any();
+            bool hasItemPrediction = listFamilySy.Any(x => x.Id.Value < 10000);
+
+            List<Element> listElement;
+            List<Element> listElement2 = new List<Element>();
+
+            FamilySymbol famyilyCheck = null;
+            bool isContaint = listFamilySy.Contains(famyilyCheck);
+
+            List<string> listName = new List<string> { "A", "B", "A", "C" };
+            bool hasC = listName.Contains("D");
+
+
+            int count1= listFamilySy.Count();
+
+            Func<FamilySymbol, bool> predictCount = (y) => { return y.Id.Value > 1000L;};
+
+            int count2 = listFamilySy.Count(x => x.Id.Value > 100L);
+
+            int count3 = listFamilySy.Count(predictCount);
+
+            // fa = listName[4];
+            //string fa= listName.ElementAt(4);
+
+            string fa = listName.ElementAtOrDefault(4);
+
+            string first = listName.First();
+            string last= listName.Last();
+
+            string first2 = listName.First(x => x == "A");
+
+            string name = "W14x109";
+            FamilySymbol faSyml = listFamilySy.First(x => x.Name == name);
+
+            FamilySymbol lastSyl= listFamilySy.Last(y=>y.Name == name);
+
+            FamilySymbol faSyl3= listFamilySy.FirstOrDefault(x => x.Name == name);
+            FamilySymbol faSy24= listFamilySy.LastOrDefault(y=>y.Name == name);
+
+            FamilySymbol fa5= listFamilySy.Single(x=>x.Name == name);
+            FamilySymbol fa6 = listFamilySy.SingleOrDefault(x => x.Name == name);
+
+            List<FamilySymbol> listFamilySy2= new List<FamilySymbol> { fa5,fa6 };
+
+            listFamilySy.Add(fa6);
+            listFamilySy.Add(fa5);
+            listFamilySy.Remove(fa6);
+
+            listFamilySy.AddRange(listFamilySy2);
+
+            var listConcat= listFamilySy.Concat(listFamilySy2);
+
+            var distinct= listFamilySy.Distinct();
+
+
+
+
+
+
 
             return Result.Succeeded;
         }
     }
+
+    public class NameId
+    {
+        public NameId(string name, ElementId id)
+        {
+            (Name,ElementId)=(name,id); 
+        }
+        public string Name { get; set; }
+        public ElementId ElementId { get; set; }
+    }
+
 }
