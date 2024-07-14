@@ -38,7 +38,6 @@ namespace LinqDemo
             ICollection<Element> filterCollection2 = new FilteredElementCollector(doc)
                 .OfCategory(BuiltInCategory.OST_DuctCurves).WhereElementIsElementType().ToElements();
 
-
             ElementCategoryFilter ductFilter= new ElementCategoryFilter(BuiltInCategory.OST_DuctCurves);
             ElementCategoryFilter pipeFilter = new ElementCategoryFilter(BuiltInCategory.OST_PipeCurves);
             ElementCategoryFilter fittingFiter = new ElementCategoryFilter(BuiltInCategory.OST_DuctFitting);
