@@ -49,7 +49,9 @@ namespace LinqDemo
 
             ICollection<Element> filterQuery = new FilteredElementCollector(doc,doc.ActiveView.Id).WherePasses(orFilter).ToElements();
             
+            
 
+            
 
 
 
