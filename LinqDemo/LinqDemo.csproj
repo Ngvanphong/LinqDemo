@@ -68,7 +68,9 @@
     <Compile Include="App.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Extension.cs" />
+    <Compile Include="OOP\IStudent.cs" />
     <Compile Include="OOP\Person.cs" />
+    <Compile Include="OOP\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
