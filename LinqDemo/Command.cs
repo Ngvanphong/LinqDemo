@@ -34,7 +34,14 @@ namespace LinqDemo
 
 
 
-            
+            student.Sum();
+            student2.PrintAbtract();
+            student2.NameAbstract = "GGG";
+            double res= student.Subtract(20, 10);
+
+
+            Person person4 = new Person();
+            person4.Subtract(20, 10);
 
 
 

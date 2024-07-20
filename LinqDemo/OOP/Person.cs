@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LinqDemo.OOP
 {
-    public class Person
+    public class Person : AbstractClass
     {
         public static int Number;
 
@@ -22,6 +22,7 @@ namespace LinqDemo.OOP
         }
 
         public long Id {set; get; }
+        public override string NameAbstract { get; set; }
 
         public string Name;
 
@@ -36,5 +37,15 @@ namespace LinqDemo.OOP
             TaskDialog.Show("Person", name);
         }
 
+        public override double Sum()
+        {
+            return 10;
+        }
+
+        public virtual double Subtract(double a , double b)
+        {
+            double result = a - b;
+            return result;
+        }
     }
 }

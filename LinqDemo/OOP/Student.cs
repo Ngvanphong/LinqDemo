@@ -16,6 +16,12 @@ namespace LinqDemo.OOP
         {
             
         }
+
+
+        public override double Subtract(double a, double b)
+        {
+          return   base.Subtract(a, b)-1;
+        }
         public double AveragePoint(double math, double lit, double english)
         {
             double aver = SumPointStudent(math, lit, english) / 3;
