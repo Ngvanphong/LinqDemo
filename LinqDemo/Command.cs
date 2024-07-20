@@ -49,7 +49,6 @@ namespace LinqDemo
 
             ICollection<Element> filterQuery = new FilteredElementCollector(doc,doc.ActiveView.Id).WherePasses(orFilter).ToElements();
 
-
             var col = new FilteredElementCollector(doc, doc.ActiveView.Id).OfCategory(BuiltInCategory.OST_DuctFitting).
                 WhereElementIsNotElementType().ToElements();
 

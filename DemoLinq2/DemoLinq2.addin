@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Text>Command DemoLinq2</Text>
+		<Description>DemoLinq2</Description>
+		<Assembly>DemoLinq2.dll</Assembly>
+		<FullClassName>DemoLinq2.Command</FullClassName>
+		<ClientId>95bfc6d5-103d-469f-b279-d6efde301120</ClientId>
+		<VendorId>Tobic</VendorId>
+		<VendorDescription>Tobic</VendorDescription>
+	</AddIn>
+	<AddIn Type="Application">
+		<Name>Application DemoLinq2</Name>
+		<Assembly>DemoLinq2.dll</Assembly>
+		<FullClassName>DemoLinq2.App</FullClassName>
+		<ClientId>0ea6238d-1e4d-4a6d-ac78-45de8e6adc77</ClientId>
+		<VendorId>Tobic</VendorId>
+		<VendorDescription>Tobic</VendorDescription>
+	</AddIn>
+</RevitAddIns>
